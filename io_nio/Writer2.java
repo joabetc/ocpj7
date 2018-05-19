@@ -8,15 +8,21 @@ class Writer2 {
     try {
       File file = new File("fileWriter2.txt");
       FileWriter fw = new FileWriter(file);
-      fw.write("howdy\nfolks\n");
+
+      PrintWriter pw = new PrintWriter(fw);
+      pw.println("howdy");
+      pw.println("folks");
+
       fw.flush();
       fw.close();
 
       FileReader fr = new FileReader(file);
       size = fr.read(in);
+
+      BufferedReader br = new BufferedReader(fr);
+      String data = br.readLine();
       System.out.print(size + " ");
-      for(char c : in)
-        System.out.print(c);
+      
       fr.close();
     } catch(IOException e) { }
   }
