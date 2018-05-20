@@ -8,7 +8,7 @@ class FileDelete {
       if (false)
         Files.createFile(path);
     } finally {
-      Files.delete(path);
+      Files.deleteIfExists(path);
     }
   }
 }
