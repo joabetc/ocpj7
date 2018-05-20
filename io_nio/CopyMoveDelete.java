@@ -10,7 +10,7 @@ class CopyMoveDelete {
       Files.copy(one, targ);
       Files.copy(two, targ);
     } catch (IOException e) {
-
+      System.out.println(e.getMessage());
     }
   }
 }
