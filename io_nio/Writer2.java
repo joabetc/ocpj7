@@ -13,8 +13,8 @@ class Writer2 {
       pw.println("howdy");
       pw.println("folks");
 
-      fw.flush();
-      fw.close();
+      pw.flush();
+      pw.close();
 
       FileReader fr = new FileReader(file);
       size = fr.read(in);
@@ -22,7 +22,7 @@ class Writer2 {
       BufferedReader br = new BufferedReader(fr);
       String data = br.readLine();
       System.out.print(size + " ");
-      
+
       fr.close();
     } catch(IOException e) { }
   }
