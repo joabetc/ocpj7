@@ -6,17 +6,20 @@ class Writer2 {
     int size = 0;
 
     try {
-      File file = new File("fileWriter2.txt");
-      FileWriter fw = new FileWriter(file);
+      File myDir = new File("mydir");
+      myDir.mkdir();
 
-      PrintWriter pw = new PrintWriter(fw);
+      File myFile = new File(myDir, "myFile.txt");
+      myFile.createNewFile();
+
+      PrintWriter pw = new PrintWriter(myFile);
       pw.println("howdy");
       pw.println("folks");
 
       pw.flush();
       pw.close();
 
-      FileReader fr = new FileReader(file);
+      FileReader fr = new FileReader(myFile);
       size = fr.read(in);
 
       BufferedReader br = new BufferedReader(fr);
