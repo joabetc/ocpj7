@@ -2,11 +2,12 @@ import java.nio.file.*;
 
 class TestPathMatcher2 {
   public static void main(String[] args) {
-    Path path = Paths.get("/com/java/One.java");
-    matches(path, "glob:*.java");
-    matches(path, "glob:**/*.java");
-    matches(path, "glob:*");
-    matches(path, "glob:**");
+    Path path1 = Paths.get("One.java");
+    Path path2 = Paths.get("One.ja^a");
+    matches(path1, "glob:*.????");
+    matches(path1, "glob:*.???");
+    matches(path2, "glob:*.????");
+    matches(path2, "glob:*.???");
   }
 
   public static void matches(Path path, String glob) {
