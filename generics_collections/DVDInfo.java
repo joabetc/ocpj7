@@ -13,6 +13,10 @@ class DVDInfo implements Comparable<DVDInfo> {
     return title;
   }
 
+  public String getGenre() {
+    return genre;
+  }
+  
   public String toString() {
     return title + " " + genre + " " + leadActor + "\n";
   }
