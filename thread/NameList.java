@@ -1,11 +1,11 @@
 import java.util.*;
 
 public class NameList {
-  private List names = Collections.synchronizedList(new LinkedList());
-  public void add(String name) {
+  private List names = new LinkedList();
+  public synchronized void add(String name) {
     names.add(name);
   }
-  public String removeFirst() {
+  public synchronized String removeFirst() {
     if (names.size() > 0)
       return (String) names.remove(0);
     else
