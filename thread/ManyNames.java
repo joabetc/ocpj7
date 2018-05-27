@@ -4,6 +4,9 @@ class NameRunnable implements Runnable {
       System.out.println("Run by "
         + Thread.currentThread().getName()
         + ", x is " + x);
+      try {
+        Thread.sleep(1000);
+      } catch (InterruptedException ex) { }
     }
   }
 }
