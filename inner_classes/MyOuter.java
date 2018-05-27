@@ -6,8 +6,7 @@ class MyOuter {
   }
 
   public static void main(String[] args) {
-    MyOuter mo = new MyOuter();
-    MyOuter.MyInner inner = mo.new MyInner();
+    MyOuter.MyInner inner = new MyOuter().new MyInner();
     inner.seeOuter();
   }
 
