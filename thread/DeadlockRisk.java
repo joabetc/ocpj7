@@ -5,8 +5,8 @@ public class DeadlockRisk {
   private Resource resourceA = new Resource();
   private Resource resourceB = new Resource();
   public int read() {
-    synchronized(resourceA) {
-      synchronized(resourceB) {
+    synchronized(resourceB) {
+      synchronized(resourceA) {
         return resourceB.value + resourceA.value;
       }
     }
