@@ -5,6 +5,12 @@ class MyOuter {
     in.seeOuter();
   }
 
+  public static void main(String[] args) {
+    MyOuter mo = new MyOuter();
+    MyOuter.MyInner inner = mo.new MyInner();
+    inner.seeOuter();
+  }
+
   class MyInner {
     public void seeOuter() {
       System.out.println("Outer x is " + x);
