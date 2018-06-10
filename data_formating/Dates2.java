@@ -16,8 +16,11 @@ class Dates2 {
     c.add(Calendar.MONTH, 1);
     c.add(Calendar.HOUR, -4);       //subtract 4 hours from c's value
     c.add(Calendar.YEAR, 2);        //add 2 years to c's value
-    c.add(Calendar.DAY_OF_WEEK, -2) //subtract two days from c's value 
+    c.add(Calendar.DAY_OF_WEEK, -2); //subtract two days from c's value
     Date d2 = c.getTime();
     System.out.println("new date " + d2.toString());
+    c.roll(Calendar.MONTH, 9);
+    Date d4 = c.getTime();
+    System.out.println("new date " + d4.toString());
   }
 }
