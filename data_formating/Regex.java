@@ -5,7 +5,7 @@ class Regex {
     Matcher m = p.matcher(args[1]);
     System.out.println("Pattern is " + m.pattern());
     while(m.find()) {
-      System.out.println(m.start() + " " + m.group());
+      System.out.println(m.start() + " " + m.end() + " " + m.group());
     }
   }
 }
