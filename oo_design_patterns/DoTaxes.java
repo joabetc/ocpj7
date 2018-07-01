@@ -3,7 +3,8 @@ public class DoTaxes {
   float doColorado() {
     SalesTaxRates str = new SalesTaxRates();
     rate = str.salesRate; // this should be a method call like:
-  }                       // rate = str.getSalesRate("CO");
+    return rate;          // rate = str.getSalesRate("CO");
+  }
 }
 
 class SalesTaxRates {
