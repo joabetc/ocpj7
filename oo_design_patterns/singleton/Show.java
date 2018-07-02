@@ -26,7 +26,7 @@ public class Show {
   }
 
   private static void ticketAgentBooks(String seat) {
-    Show show = new Show.getInstance();
+    Show show = Show.getInstance();
     System.out.println(show.bookSeat(seat));
   }
 }
