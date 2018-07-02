@@ -2,9 +2,15 @@ import java.util.*;
 
 public class Show {
 
+  private static final Show INSTANCE = new Show();
+
   private Set<String> availableSeats;
 
-  public Show() {
+  public static Show getInstance() {
+    return INSTANCE;
+  }
+
+  private Show() {
     availableSeats = new HashSet<String>();
     availableSeats.add("1A");
     availableSeats.add("1B");
@@ -20,7 +26,7 @@ public class Show {
   }
 
   private static void ticketAgentBooks(String seat) {
-    Show show = new Show();
+    Show show = new Show.getInstance();
     System.out.println(show.bookSeat(seat));
   }
 }
