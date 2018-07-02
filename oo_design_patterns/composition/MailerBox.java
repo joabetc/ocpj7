@@ -1,9 +1,13 @@
-public class MailerBox implements Box {
+public class MailerBox implements Box, Mailer {
+  private Box box;
+  public MailerBox(Box box) {
+    this.box = box;
+  }
   public void pack() {
-    System.out.println("pack box");
+    box.pack();
   }
   public void seal() {
-    System.out.println("seal box");
+    box.seal();
   }
   public void addPostage() {
     System.out.println("affix stamps");
