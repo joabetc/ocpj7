@@ -6,7 +6,7 @@ public class MailerBox implements Box {
     System.out.println("seal box");
   }
   public void addPostage() {
-    System.out.println("affix stamps")
+    System.out.println("affix stamps");
   }
   public void ship() {
     System.out.println("put in mailbox");
