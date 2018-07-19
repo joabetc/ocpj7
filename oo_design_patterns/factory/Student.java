@@ -1,6 +1,7 @@
 public class Student {
   public static void main(String[] args) {
-    BookDao dao = new InMemoryBookDao();
+    Factory factory = new FactoryImpl();
+    BookDao dao = factory.createDao();
     Book book = new Book();
     book.setTitle("Book");
     book.setAuthor("John");
