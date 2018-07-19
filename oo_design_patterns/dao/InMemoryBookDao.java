@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class InMemoryBookDao {
+public class InMemoryBookDao implements BookDao {
 
   private static Map<String, Book> bookstore =
       new HashMap<String, Book>();

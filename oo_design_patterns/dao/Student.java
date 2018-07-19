@@ -1,6 +1,6 @@
 public class Student {
   public static void main(String[] args) {
-    InMemoryBookDao dao = new InMemoryBookDao();
+    BookDao dao = new InMemoryBookDao();
     Book book = new Book();
     book.setTitle("Book");
     book.setAuthor("John");
