@@ -21,7 +21,7 @@ public class InMemoryBookDao {
       bookstore.remove(book.getIsbn());
     }
 
-    public void update() {
+    public void update(Book book) {
       // no operation - for an in-memory database
       // we update automatically
     }
