@@ -1,5 +1,9 @@
 public class FactoryImpl extends Factory {
   public BookDao createDao() {
-    return new InMemoryBookDao();
+    if (Util.isTestMode()) {
+      return new InMemoryBookDao();
+    } else {
+      return new OracleBookDao();
+    }    
   }
 }
