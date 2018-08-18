@@ -8,7 +8,7 @@ class CopyMoveDelete {
       Path two = Paths.get("mydir/myFile0.txt");
       Path targ = Paths.get("mydir/test3.txt");
       Files.copy(one, targ);
-      Files.copy(two, targ);
+      Files.copy(two, targ, StandardCopyOption.REPLACE_EXISTING);
     } catch (IOException e) {
       System.out.println(e.getMessage());
     }
