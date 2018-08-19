@@ -21,6 +21,9 @@ public class ReadingWritingAttributes {
       FileTime fileTime = FileTime.fromMillis(januaryFirst.getTime());
       Files.setLastModifiedTime(path, fileTime);
       System.out.println(Files.getLastModifiedTime(path));
+      System.out.println(Files.isExecutable(path));
+      System.out.println(Files.isReadable(path));
+      System.out.println(Files.isWritable(path));
       Files.delete(path);
     } catch (IOException e) {}
   }
