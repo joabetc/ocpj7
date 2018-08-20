@@ -8,6 +8,8 @@ public class PrintDirs extends SimpleFileVisitor<Path> {
     String name = dir.getFileName().toString();
     if (name.equals("java"))
       return FileVisitResult.SKIP_SUBTREE;
+    if (name.equals("mydir"))
+      return FileVisitResult.SKIP_SIBLINGS;
     return FileVisitResult.CONTINUE;
   }
   public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
