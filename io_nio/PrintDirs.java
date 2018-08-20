@@ -5,12 +5,14 @@ import java.nio.file.attribute.*;
 public class PrintDirs extends SimpleFileVisitor<Path> {
   public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) {
     System.out.println("pre: " + dir);
+    String name = dir.getFileName().toString();
+    if (name.equals("java"))
+      return FileVisitResult.SKIP_SUBTREE;
     return FileVisitResult.CONTINUE;
   }
   public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
     System.out.println("file: " + file);
-    return
-    FileVisitResult.CONTINUE;
+    return FileVisitResult.CONTINUE;
   }
   public FileVisitResult visitFileFailed(Path file, IOException exc) {
     return FileVisitResult.CONTINUE;
