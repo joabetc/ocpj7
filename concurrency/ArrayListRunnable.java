@@ -1,7 +1,8 @@
 import java.util.*;
+import java.util.concurrent.*;
 
 public class ArrayListRunnable implements Runnable {
-  private List<Integer> list = new ArrayList<>();
+  private List<Integer> list = Collections.synchronizedList(new ArrayList());
 
   public ArrayListRunnable() {
     for (int i = 0; i < 100000; i++) {
