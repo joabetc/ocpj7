@@ -23,10 +23,8 @@ public class RandomInitRecursiveAction extends RecursiveAction {
     } else {
       int halfWay = ((end - start) / 2) + start;
       RandomInitRecursiveAction a1 = new RandomInitRecursiveAction(data, start, halfWay);
-      a1.fork();
       RandomInitRecursiveAction a2 = new RandomInitRecursiveAction(data, halfWay, end);
-      a2.compute();
-      a1.join();
+      invokeAll(a1, a2);
     }
   }
 
